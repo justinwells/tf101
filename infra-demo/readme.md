@@ -10,16 +10,17 @@ Demo repo for standing up a nano EC2 with a very basic web site. Public IP addre
 
 The code is set up for multiple environment deployment - so there are seperate tfvars (variable values) and remote backend configurations. These are stored in the 'config' directory.
 To save having to define the path to the right tfvars (and backend) every time a TF command is run, shortcut commands are defined in the makefile.
-make init = terraform init (with appropriate back end config)
-make plan = terraform plan (with path to correct TFVARs)
-etc. 
+- make init = terraform init (with appropriate back end config)
+- make plan = terraform plan (with path to correct TFVARs)
+- etc. 
 
 Before running, set an environment variable called ENVIRONMENT to point at the set of config you want to use:
 
+```
 export ENVIRONMENT=dev
 make init
 make plan
-etc.
+```
 
 Also need to put in the following values for the prereqs in the environment config files that are in use:
 
