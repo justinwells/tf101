@@ -1,0 +1,16 @@
+TF_ENVIRONMENTS_DIR = config
+TF_ARGS = -var-file=$(TF_ENVIRONMENTS_DIR)/$(ENVIRONMENT).tfvars 
+
+init:
+	@terraform init -backend-config="$(TF_ENVIRONMENTS_DIR)/$(ENVIRONMENT)-backend.conf"
+
+apply:
+	@terraform apply $(TF_ARGS) $(TF_AUTO_APPROVE)
+
+plan:
+	@terraform plan $(TF_ARGS)
+
+destroy:
+	@TF_WARN_OUTPUT_ERRORS=1 terraform destroy $(TF_ARGS)
+
+
