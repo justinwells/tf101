@@ -1,4 +1,4 @@
-Demo repo for standing up a nano EC2 with a very basic web site. Public IP address is provided as a TF output. THis was originally put together for a very quick demo and so built on existing infrastructure - therefore there are pre-reqs:
+Demo repo for standing up a nano EC2 with a very basic web site. Public IP address is provided as a TF output. This was originally put together for a very quick demo and so built on existing infrastructure - therefore there are pre-reqs:
 
 1. A VPC with public and private subnets (which are tagged with a name containing public/private)
 2. VPC has an internet gateway
